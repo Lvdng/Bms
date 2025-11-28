@@ -1,10 +1,9 @@
-# 图书管理系统
+# 悦读图书管理系统
 
 ## 项目介绍
 
-图书管理系统是一个基于现代 Web技术的全功能应用，旨在为图书馆提供高效、便捷的图书管理解决方案。该系统采用前后端分离架构，结合了多种先进技术，以确保系统的高性能和易用性。
+悦读图书管理系统是一个基于现代 Web技术的全功能应用，旨在为图书馆提供高效、便捷的图书管理解决方案。该系统采用前后端分离架构，结合了多种先进技术，以确保系统的高性能和易用性。
 
-![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/honor.jpg)
 
 ## 项目结构
 
@@ -21,26 +20,9 @@
 ```
 
 ## 软件效果图
-
 ### 管理员账号效果
-
-|                                                                                         |                                                                                         |
-|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/1.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/2.jpg)  |
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/3.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/4.jpg)  |
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/5.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/6.jpg)  |
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/7.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/8.jpg)  |
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/9.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/10.jpg) |
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/11.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/12.jpg) |
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/13.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/14.jpg) |
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/15.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/16.jpg) |
-
 ### 游客账号效果
 
-|                                                                                        |                                                                                        |
-|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/a.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/b.jpg) |
-| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/c.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/d.jpg) |
 
 ## 技术栈
 
@@ -212,20 +194,6 @@
     - 管理员可以查看用户借阅行为，分析用户偏好。
     - 系统提供用户活跃度、借阅频率等数据分析。
     - 通过这些数据，管理员可以优化图书采购策略和用户服务。
-
-## 🚀 获取笔记
-
-- **后端笔记**：[https://gitee.com/xiaohelikesleep/front-notes](https://gitee.com/xiaohelikesleep/front-notes)
-- **前端笔记**：[https://gitee.com/xiaohelikesleep/back-notes](https://gitee.com/xiaohelikesleep/back-notes)
-
-## 📌 联系方式
-
-如果您对我们的项目感兴趣，或者有任何技术问题想要探讨，欢迎通过以下方式与我联系。我非常期待与您交流，共同学习，共同进步！🌊💡🤖
-
-- **邮箱**：[2109664977@qq.com](mailto:2109664977@qq.com) 📧
-- **GitHub**：[https://github.com/bestwishes0203](https://github.com/bestwishes0203) 🐙
-- **CSDN**：[https://blog.csdn.net/bestwishes0203/](https://blog.csdn.net/xiaohelikesleep/) 📖
-- **个人博客**：[http://bestwishes0203.github.io/blog/](http://bestwishes0203.github.io/blog/) 🏠
 
 ## 🎉 结语
 
