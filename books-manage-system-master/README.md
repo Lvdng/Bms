@@ -77,7 +77,7 @@
     - 打开终端或命令提示符。
     - 使用Git克隆项目源代码到本地：
       ```
-      git clone https://gitee.com/xiaohelikesleep/books-manage-system
+      https://github.com/Lvdng/Bms/blob/master/books-manage-system-master
       ```
     - 进入项目目录：
       ```
@@ -87,7 +87,7 @@
 
 ### 数据库部署
 
-1. **安装MySQL**：
+1. **安装MySQL9.0**：
     - 确保MySQL数据库已安装在你的开发环境中。
     - 使用Navicat或其他数据库管理工具连接到MySQL服务器。
 
