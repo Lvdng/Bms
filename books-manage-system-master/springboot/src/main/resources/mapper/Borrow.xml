@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.BorrowMapper">
+
+    <insert id="insertById">
+        insert into borrow(u_id, b_code, br_debit_reply, br_borrow)
+        values (#{u_id}, #{b_code}, #{br_debit_reply}, #{br_borrow})
+    </insert>
+
+    <insert id="insertByBorrow">
+        insert into borrow(u_id, b_code, br_borrow)
+        values (#{u_id}, #{b_code}, #{br_borrow})
+    </insert>
+
+    <update id="updateById">
+        update borrow
+        <trim prefix="set" suffixOverrides=",">
+            <if test="u_id != ''">
+                u_id=#{u_id},
+            </if>
+            <if test="b_code != ''">
+                b_code=#{b_code},
+            </if>
+            <if test="br_borrow != null">
+                br_borrow=#{br_borrow},
+            </if>
+            <if test="br_debit_reply != null">
+                br_debit_reply=#{br_debit_reply},
+            </if>
+        </trim>
+        <where>
+            br_serial = #{br_serial}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from borrow
+        where br_serial =
+              #{br_serial}
+    </delete>
+
+    <select id="selectAll" resultType="com.example.springboot.entity.Borrow">
+        select *
+        from borrow;
+    </select>
+
+    <select id="selectById" resultType="com.example.springboot.entity.Borrow">
+        select *
+        from borrow
+        where br_serial = #{br_serial}
+    </select>
+
+    <select id="selectByUid" resultType="com.example.springboot.entity.Borrow">
+        select *
+        from borrow
+        where u_id = #{u_id}
+        order by br_debit_reply desc limit 9
+    </select>
+
+    <select id="selectByDebit" resultType="java.lang.Integer">
+        select count(*)
+        from borrow
+        where br_debit_reply like concat('%', #{currentTime}, '%')
+          and br_borrow = 0
+    </select>
+
+    <select id="selectByReply" resultType="java.lang.Integer">
+        select count(*)
+        from borrow
+        where br_debit_reply like concat('%', #{currentTime}, '%')
+          and br_borrow = 1
+    </select>
+
+
+</mapper>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.MenuMapper">
+
+    <insert id="insertById">
+        insert into menu(m_id, m_icon, m_name, m_path, m_component, m_status)
+        values (#{m_id}, #{m_icon}, #{m_name}, #{m_path}, #{m_component}, #{m_status})
+    </insert>
+
+    <update id="updateById">
+        update menu
+        <trim prefix="set" suffixOverrides=",">
+            <if test="m_icon != ''">
+                m_icon=#{m_icon},
+            </if>
+            <if test="m_name != ''">
+                m_name=#{m_name},
+            </if>
+            <if test="m_path != ''">
+                m_path=#{m_path},
+            </if>
+            <if test="m_component != ''">
+                m_component=#{m_component},
+            </if>
+            <if test="m_status != null">
+                m_status=#{m_status},
+            </if>
+        </trim>
+        <where>
+            m_id = #{m_id}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from menu
+        where m_id =
+              #{m_id}
+    </delete>
+
+    <select id="selectAll" resultType="com.example.springboot.entity.Menu">
+        select *
+        from menu;
+    </select>
+
+    <select id="selectById" resultType="com.example.springboot.entity.Menu">
+        select *
+        from menu
+        where m_id = #{m_id}
+    </select>
+
+    <select id="selectByIdStatus" resultType="com.example.springboot.entity.Menu">
+        select *
+        from menu
+        where m_id = #{m_id}
+          and m_status = 1
+    </select>
+
+</mapper>

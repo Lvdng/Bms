@@ -1,0 +1,234 @@
+# 图书管理系统
+
+## 项目介绍
+
+图书管理系统是一个基于现代 Web技术的全功能应用，旨在为图书馆提供高效、便捷的图书管理解决方案。该系统采用前后端分离架构，结合了多种先进技术，以确保系统的高性能和易用性。
+
+![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/honor.jpg)
+
+## 项目结构
+
+###### 根目录
+
+```
+根目录
+    ├── mysql                     # 数据库脚本和相关文件
+    ├── release                   # 发行的二进制文件和可执行程序
+    ├── springboot                # 后端Spring Boot源代码
+    ├── vue                       # 前端Vue.js源代码
+    ├── screen                    # 系统截图和示例图片
+    └── README.md                 # 项目介绍和安装指南
+```
+
+## 软件效果图
+
+### 管理员账号效果
+
+|                                                                                         |                                                                                         |
+|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/1.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/2.jpg)  |
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/3.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/4.jpg)  |
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/5.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/6.jpg)  |
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/7.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/8.jpg)  |
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/9.jpg)  | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/10.jpg) |
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/11.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/12.jpg) |
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/13.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/14.jpg) |
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/15.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/16.jpg) |
+
+### 游客账号效果
+
+|                                                                                        |                                                                                        |
+|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/a.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/b.jpg) |
+| ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/c.jpg) | ![屏幕截图](https://gitee.com/xiaohelikesleep/books-manage-system/raw/master/screen/d.jpg) |
+
+## 技术栈
+
+- **Node.js**: 作为后端开发环境，提供强大的异步处理能力。
+- **NPM**: 用于管理项目依赖，简化开发流程。
+- **Spring Boot**: 用于构建快速、易于部署的Java应用程序。
+- **MySQL**: 关系型数据库，用于存储图书和用户数据。
+- **Redis**: 高性能的键值对存储系统，用作缓存以提高系统响应速度。
+- **Vue.js**: 前端框架，用于构建用户界面和单页应用程序。
+- **Vite**: 现代化的前端构建工具，提供快速的冷启动和热模块替换。
+- **IDEA**: 集成开发环境，用于编写和管理后端代码。
+- **DataGrap**: 数据库管理工具，用于设计和管理MySQL数据库。
+- **Webstorm**: 前端开发IDE，支持Vue.js等现代前端技术。
+- **Apifox**: API开发工具，用于设计、测试和文档化API。
+- **Another Redis Desktop Manager**: Redis数据库管理工具。
+- **Navicat Premium 16**: 数据库开发工具，支持多种数据库。
+- **Postman**: API测试工具，用于测试和文档化API。
+- **Swagger**: 自动生成API文档的工具。
+- **MyBatis**: 持久层框架，简化数据库操作。
+- **ECharts**: 数据可视化库，用于生成图表。
+
+## 功能亮点
+
+- **前后端分离架构**: 采用现代化的前后端分离架构，使得前端和后端可以独立开发和部署。前端使用Vue.js框架，后端基于Spring
+  Boot，这样的分离不仅提高了开发效率，还便于团队协作和系统维护。
+
+- **动态路由权限管理**: 实现了基于角色的访问控制，确保不同权限的用户能看到不同的菜单和路由。管理员、图书馆员和普通用户都有定制化的界面和功能，提高了系统的安全性和用户体验。
+
+- **数据导入导出**: 提供了便捷的数据操作功能，用户可以通过Excel表格批量导入图书信息，同时也能将借阅记录导出为Excel文件，方便进行数据分析和备份。
+
+- **图表展示**: 利用ECharts库，系统能够生成各种图表，如柱状图、饼图等，直观地展示图书借阅情况、用户活跃度等关键数据。这些图表帮助管理员快速了解图书馆的运营状况，为决策提供数据支持。
+
+- **验证码功能**: 在用户注册和登录时，系统会生成验证码，增加了一层安全防护，防止恶意攻击和自动化脚本的滥用。
+
+- **图片上传**: 用户可以上传图书封面图片，系统支持图片的存储、展示和下载，提高了图书信息的丰富性和吸引力。
+
+- **信息管理**: 提供了全面的图书信息管理功能，包括图书的添加、编辑、删除和查询。管理员可以轻松管理图书库存，更新图书状态。
+
+- **后台管理**: 管理员可以通过后台管理界面，监控系统运行状态，管理用户账户，审核图书信息，以及进行系统设置和维护。
+
+- **Swagger集成**: 后端API文档通过Swagger自动生成，提供了交互式的API文档，方便前后端开发者理解和使用API。
+
+- **MyBatis框架**: 使用MyBatis框架简化数据库操作，提高了数据库交互的效率和可维护性。
+
+- **Redis缓存**: 引入Redis作为缓存系统，提高了数据读取速度，优化了系统性能，尤其是在高并发场景下。
+
+## 安装教程
+
+### 克隆源代码
+
+1. **获取源代码**：
+    - 打开终端或命令提示符。
+    - 使用Git克隆项目源代码到本地：
+      ```
+      git clone https://gitee.com/xiaohelikesleep/books-manage-system
+      ```
+    - 进入项目目录：
+      ```
+      cd [项目文件夹名称]
+      ```
+    - 解压下载的源代码压缩包（如果使用压缩包下载）。
+
+### 数据库部署
+
+1. **安装MySQL**：
+    - 确保MySQL数据库已安装在你的开发环境中。
+    - 使用Navicat或其他数据库管理工具连接到MySQL服务器。
+
+2. **创建数据库**：
+    - 在数据库管理工具中创建一个新的数据库，例如命名为`books-manage-system`。
+
+3. **导入数据库脚本**：
+    - 在项目文件夹中找到`db_book.sql`文件。
+    - 在数据库管理工具中执行该脚本，以创建所需的数据库表和初始数据。
+
+### 前端部署
+
+1. **打开项目**：
+    - 使用WebStorm或其他IDE打开前端项目文件夹。
+
+2. **安装依赖**：
+    - 在项目根目录下打开终端。
+    - 运行以下命令安装所有依赖：
+      ```
+      npm install
+      ```
+
+3. **启动开发服务器**：
+    - 在终端中运行以下命令启动前端开发服务器：
+      ```
+      npm run dev
+      ```
+    - 默认情况下，前端开发服务器将在本地5173端口启动。在浏览器中输入`http://localhost:5173`访问前端应用。
+
+### 后端部署
+
+1. **打开项目**：
+    - 使用IntelliJ IDEA或其他IDE打开后端项目。
+
+2. **下载Maven依赖**：
+    - 在IDE中等待Maven自动下载并安装所有依赖。
+
+3. **配置数据库连接**：
+    - 在`application.yml`文件中配置数据库连接信息，包括数据库地址、端口、用户名和密码。
+
+4. **启动应用程序**：
+    - 在IDE中找到并运行`SpringBootApplication`类的`main`方法，或者在终端中使用以下命令启动应用程序：
+      ```
+      mvn spring-boot:run
+      ```
+    - 后端服务将默认在本地9090端口启动。在浏览器中输入`http://localhost:9090`访问后端服务。
+
+## 使用说明
+
+### 注册/登录
+
+1. **用户注册**：
+    - 访问系统登录页面。
+    - 点击“注册”按钮，进入注册界面。
+    - 填写必要的注册信息，如用户名、密码、邮箱等。
+    - 提交注册信息，系统将验证并创建新用户账户。
+    - 注册成功后，用户将收到注册成功的通知，并可使用新账户登录。
+
+2. **用户登录**：
+    - 在登录页面输入已注册的用户名和密码。
+    - 点击“登录”按钮，系统将验证用户凭据。
+    - 登录成功后，用户将被重定向到系统主界面。
+
+### 图书管理
+
+1. **添加图书**：
+    - 在系统主界面，找到并点击“图书管理”模块。
+    - 选择“添加图书”功能，进入图书添加界面。
+    - 填写图书的详细信息，包括书名、作者、ISBN、分类等。
+    - 上传图书封面图片（如果需要）。
+    - 保存图书信息，系统将添加新图书到数据库。
+
+2. **编辑图书信息**：
+    - 在图书管理界面，找到需要编辑的图书。
+    - 点击“编辑”按钮，系统将加载图书的详细信息。
+    - 对图书信息进行修改，如更新作者信息或更改分类。
+    - 保存更改，系统将更新图书信息。
+
+3. **删除图书**：
+    - 在图书管理界面，选择需要删除的图书。
+    - 点击“删除”按钮，系统将提示确认操作。
+    - 确认后，图书将从数据库中移除。
+
+### 借阅管理
+
+1. **借阅图书**：
+    - 用户在图书列表中选择想要借阅的图书。
+    - 点击“借阅”按钮，系统将记录借阅信息。
+    - 用户将收到借阅成功的通知，并可查看借阅记录。
+
+2. **归还图书**：
+    - 在用户个人中心，找到当前借阅的图书列表。
+    - 选择需要归还的图书，点击“归还”按钮。
+    - 系统将更新图书状态，并记录归还信息。
+
+### 数据统计
+
+1. **借阅统计**：
+    - 管理员登录系统后，进入“数据统计”模块。
+    - 选择借阅统计功能，系统将展示图书借阅次数、热门图书等统计信息。
+    - 管理员可以根据需要生成统计报告。
+
+2. **用户行为分析**：
+    - 管理员可以查看用户借阅行为，分析用户偏好。
+    - 系统提供用户活跃度、借阅频率等数据分析。
+    - 通过这些数据，管理员可以优化图书采购策略和用户服务。
+
+## 🚀 获取笔记
+
+- **后端笔记**：[https://gitee.com/xiaohelikesleep/front-notes](https://gitee.com/xiaohelikesleep/front-notes)
+- **前端笔记**：[https://gitee.com/xiaohelikesleep/back-notes](https://gitee.com/xiaohelikesleep/back-notes)
+
+## 📌 联系方式
+
+如果您对我们的项目感兴趣，或者有任何技术问题想要探讨，欢迎通过以下方式与我联系。我非常期待与您交流，共同学习，共同进步！🌊💡🤖
+
+- **邮箱**：[2109664977@qq.com](mailto:2109664977@qq.com) 📧
+- **GitHub**：[https://github.com/bestwishes0203](https://github.com/bestwishes0203) 🐙
+- **CSDN**：[https://blog.csdn.net/bestwishes0203/](https://blog.csdn.net/xiaohelikesleep/) 📖
+- **个人博客**：[http://bestwishes0203.github.io/blog/](http://bestwishes0203.github.io/blog/) 🏠
+
+## 🎉 结语
+
+感谢你的访问，期待与你在技术的道路上相遇！👋🌟🚀
+
+

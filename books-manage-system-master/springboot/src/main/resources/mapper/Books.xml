@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.BooksMapper">
+
+    <insert id="insertById">
+        insert into books(bs_id, bs_isbn, bs_name, s_id, bs_auth, bs_publish, bs_price, bs_volume, bs_inventory,
+                          bs_status)
+        values (#{bs_id}, #{bs_isbn}, #{bs_name}, #{s_id}, #{bs_auth}, #{bs_publish}, #{bs_price}, #{bs_volume},
+                #{bs_inventory}, #{bs_status})
+    </insert>
+
+    <update id="updateById">
+        update books
+        <trim prefix="set" suffixOverrides=",">
+            <if test="bs_isbn != ''">
+                bs_isbn=#{bs_isbn},
+            </if>
+            <if test="bs_name != ''">
+                bs_name=#{bs_name},
+            </if>
+            <if test="s_id != null">
+                s_id=#{s_id},
+            </if>
+            <if test="bs_auth != ''">
+                bs_auth=#{bs_auth},
+            </if>
+            <if test="bs_publish != ''">
+                bs_publish=#{bs_publish},
+            </if>
+            <if test="bs_price != null">
+                bs_price=#{bs_price},
+            </if>
+            <if test="bs_volume != null">
+                bs_volume=#{bs_volume},
+            </if>
+            <if test="bs_inventory != null">
+                bs_inventory=#{bs_inventory},
+            </if>
+            <if test="bs_status != null">
+                bs_status=#{bs_status},
+            </if>
+        </trim>
+        <where>
+            bs_id = #{bs_id}
+        </where>
+    </update>
+
+    <update id="updateByBorrow">
+        update books
+        <trim prefix="set" suffixOverrides=",">
+            <if test="bs_inventory != null">
+                bs_inventory=#{bs_inventory},
+            </if>
+        </trim>
+        <where>
+            bs_id = #{bs_id}
+        </where>
+    </update>
+
+    <update id="updateByBsvolume">
+        update books
+        <trim prefix="set" suffixOverrides=",">
+            <if test="bs_volume != null">
+                bs_volume=#{bs_volume},
+            </if>
+            <if test="bs_inventory != null">
+                bs_inventory=#{bs_inventory},
+            </if>
+        </trim>
+        <where>
+            bs_id = #{bs_id}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from books
+        where bs_id =
+              #{bs_id}
+    </delete>
+
+    <select id="selectAll" resultType="com.example.springboot.entity.Books">
+        select *
+        from books;
+    </select>
+
+    <select id="selectById" resultType="com.example.springboot.entity.Books">
+        select *
+        from books
+        where bs_id = #{bs_id}
+    </select>
+
+</mapper>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.BooknoMapper">
+
+    <insert id="insertById">
+        insert into bookno(b_code, bs_id, u_id, b_name, b_borrow_date, b_borrow, b_status)
+        values (#{b_code}, #{bs_id}, #{u_id}, #{b_name}, #{b_borrow_date}, #{b_borrow}, #{b_status})
+    </insert>
+
+    <update id="updateById">
+        update bookno
+        <trim prefix="set" suffixOverrides=",">
+            <if test="bs_id != ''">
+                bs_id=#{bs_id},
+            </if>
+            <if test="b_name != ''">
+                b_name=#{b_name},
+            </if>
+            u_id=#{u_id},
+            b_borrow_date=#{b_borrow_date},
+            <if test="b_borrow != null">
+                b_borrow=#{b_borrow},
+            </if>
+            <if test="b_status != null">
+                b_status=#{b_status},
+            </if>
+        </trim>
+        <where>
+            b_code = #{b_code}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from bookno
+        where b_code =
+              #{b_code}
+    </delete>
+
+    <delete id="deleteAllByBsid">
+        delete
+        from bookno
+        where bs_id =
+              #{bs_id}
+    </delete>
+
+    <select id="selectAll" resultType="com.example.springboot.entity.Bookno">
+        select *
+        from bookno;
+    </select>
+
+    <select id="selectById" resultType="com.example.springboot.entity.Bookno">
+        select *
+        from bookno
+        where b_code = #{b_code}
+    </select>
+
+    <select id="selectByIdStatus" resultType="com.example.springboot.entity.Bookno">
+        select *
+        from bookno
+        where u_id = #{u_id}
+          and bs_id = #{bs_id}
+          and b_status = 1
+    </select>
+
+    <select id="selectByBsid" resultType="com.example.springboot.entity.Bookno">
+        select *
+        from bookno
+        where bs_id = #{bs_id}
+    </select>
+
+    <select id="selectByUid" resultType="com.example.springboot.entity.Bookno">
+        select *
+        from bookno
+        where u_id = #{u_id}
+          and b_borrow = 0;
+    </select>
+
+    <select id="selectByBname" resultType="com.example.springboot.entity.Bookno">
+        select *
+        from bookno
+        where b_name like concat('%',#{b_name},'%')
+    </select>
+
+</mapper>

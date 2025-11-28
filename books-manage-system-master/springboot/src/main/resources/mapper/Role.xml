@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.mapper.RoleMapper">
+
+    <insert id="insertById">
+        insert into role(r_id, r_icon, r_ide, r_limit_book, r_limit_day, r_status)
+        values (#{r_id}, #{r_icon}, #{r_ide}, #{r_limit_book}, #{r_limit_day}, #{r_status})
+    </insert>
+
+    <update id="updateById">
+        update role
+        <trim prefix="set" suffixOverrides=",">
+            <if test="r_icon != ''">
+                r_icon=#{r_icon},
+            </if>
+            <if test="r_ide != ''">
+                r_ide=#{r_ide},
+            </if>
+            <if test="r_limit_book != null">
+                r_limit_book=#{r_limit_book},
+            </if>
+            <if test="r_limit_day != null">
+                r_limit_day=#{r_limit_day},
+            </if>
+            <if test="r_status != null">
+                r_status=#{r_status},
+            </if>
+        </trim>
+        <where>
+            r_id = #{r_id}
+        </where>
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from role
+        where r_id =
+              #{r_id}
+    </delete>
+
+    <select id="selectAll" resultType="com.example.springboot.entity.Role">
+        select *
+        from role;
+    </select>
+
+    <select id="selectById" resultType="com.example.springboot.entity.Role">
+        select *
+        from role
+        where r_id = #{r_id}
+    </select>
+
+
+</mapper>
